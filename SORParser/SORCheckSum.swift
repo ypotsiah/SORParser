@@ -1,6 +1,6 @@
 import Foundation
 
-struct SORCheckSum {
+struct SORCheckSum: SORBlock {
     let chkSum: UInt16
     init?(from fileHandle: FileHandle, header: SORBlockHeader) {
         if header.version.major == 2 {

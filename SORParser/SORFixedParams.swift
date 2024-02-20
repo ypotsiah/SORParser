@@ -1,6 +1,6 @@
 import Foundation
 
-struct SORFixedParams {
+struct SORFixedParams: SORBlock {
     enum TraceType: String {
         case standardTrace = "ST"
         case reverseTrace = "RT"

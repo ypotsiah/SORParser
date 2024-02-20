@@ -1,6 +1,6 @@
 import Foundation
 
-struct SORDataPoints {
+struct SORDataPoints: SORBlock {
     let points: [UInt16]
     init?(from fileHandle: FileHandle, header: SORBlockHeader) {
         if header.version.major == 2 {

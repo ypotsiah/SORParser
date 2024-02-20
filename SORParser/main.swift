@@ -18,28 +18,26 @@ func parseFile(at path: String) {
     
     if let map = SORMap(from: fileHandle) {
         print(map)
-        if let genParams = SORGeneralParams(from: fileHandle, header: map.dataHeaders[0]) {
-            print(genParams)
-        }
-        
-        if let supParams = SORSupplierParams(from: fileHandle, header: map.dataHeaders[1]) {
-            print(supParams)
-        }
-        
-        if let fixedParams = SORFixedParams(from: fileHandle, header: map.dataHeaders[2]) {
-            print(fixedParams)
-        }
-        
-        if let keyEvents = SORKeyEvents(from: fileHandle, header: map.dataHeaders[3]) {
-            print(keyEvents)
-        }
-        
-        if let dataPoints = SORDataPoints(from: fileHandle, header: map.dataHeaders[4]) {
-            print(dataPoints)
-        }
-        
-        if let chkSum = SORCheckSum(from: fileHandle, header: map.dataHeaders[5]) {
-            print(chkSum)
+
+        let blocks: [SORBlock.Type] = [
+            SORGeneralParams.self,
+            SORSupplierParams.self,
+            SORFixedParams.self,
+            SORKeyEvents.self,
+            SORDataPoints.self,
+            SORCheckSum.self
+        ]
+
+        for (idx, block) in blocks.enumerated() {
+            guard map.dataHeaders.indices.contains(idx) else {
+                fatalError("Invalid block index: \(idx)")
+            }
+            
+            if let data = block.init(from: fileHandle, header: map.dataHeaders[idx]) {
+                print(data)
+            } else {
+                print("Unable to get data for block: \(map.dataHeaders[idx].name)")
+            }
         }
     }
 }

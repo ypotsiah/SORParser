@@ -1,6 +1,6 @@
 import Foundation
 
-struct SORGeneralParams {
+struct SORGeneralParams: SORBlock {
     enum FiberType: UInt16 {
         case multiMode = 651 // ITU-T G.651 (multi-mode fiber)
         case standardSingleMode = 652 // ITU-T G.652 (standard single-mode fiber)

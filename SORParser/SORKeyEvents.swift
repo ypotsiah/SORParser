@@ -15,7 +15,7 @@ struct SOREvent {
     let comment: String
 }
 
-struct SORKeyEvents {
+struct SORKeyEvents: SORBlock {
     let totalLoss: UInt16
     let fiberStartPosition: Int32
     let fiberLength: UInt32

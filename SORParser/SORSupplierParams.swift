@@ -1,6 +1,6 @@
 import Foundation
 
-struct SORSupplierParams {
+struct SORSupplierParams: SORBlock {
     let supplierName: String
     let OTDRName: String
     let OTDRSerialNumber: String

@@ -19,6 +19,7 @@
 		41008E6E24EEB377009461B8 /* SORDataPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41008E6D24EEB377009461B8 /* SORDataPoints.swift */; };
 		41008E7024EFC85F009461B8 /* SORCheckSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41008E6F24EFC85F009461B8 /* SORCheckSum.swift */; };
 		9E88DFBD291010D900BD7FE2 /* Test.sor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E88DFBB29100E9D00BD7FE2 /* Test.sor */; };
+		9EA41DFA2B851C500063E85D /* SORBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA41DF92B851C500063E85D /* SORBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		41008E6D24EEB377009461B8 /* SORDataPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORDataPoints.swift; sourceTree = "<group>"; };
 		41008E6F24EFC85F009461B8 /* SORCheckSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORCheckSum.swift; sourceTree = "<group>"; };
 		9E88DFBB29100E9D00BD7FE2 /* Test.sor */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.sor; sourceTree = "<group>"; };
+		9EA41DF92B851C500063E85D /* SORBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				41008E6B24EE7D3F009461B8 /* SORKeyEvents.swift */,
 				41008E6D24EEB377009461B8 /* SORDataPoints.swift */,
 				41008E6F24EFC85F009461B8 /* SORCheckSum.swift */,
+				9EA41DF92B851C500063E85D /* SORBlock.swift */,
 			);
 			path = SORParser;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA41DFA2B851C500063E85D /* SORBlock.swift in Sources */,
 				41008E5424EC6491009461B8 /* main.swift in Sources */,
 				41008E6C24EE7D3F009461B8 /* SORKeyEvents.swift in Sources */,
 				41008E6624EE640B009461B8 /* SORGeneralParams.swift in Sources */,
